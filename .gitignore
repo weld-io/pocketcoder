@@ -1,0 +1,9 @@
+platforms/
+plugins/
+hooks/README.md
+
+certificate/
+
+www/bower_components/
+res/icon/ios/*.png
+res/icon/android/*.png

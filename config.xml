@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.weld.pocketcoder" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Pocket Coder</name>
+    <description>Write and run JavaScript code on your phone.</description>
+    <author email="app-feedback@weld.io" href="https://www.weld.io">Weld</author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http:geo//*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="ios" spec="~4.3.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="~4.0.2" />
+    <splash src="res/splash/splash.png"/>
+    <preference name="SplashScreenDelay" value="1000"/>
+</widget>

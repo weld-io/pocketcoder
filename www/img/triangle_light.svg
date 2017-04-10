@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="71px" height="93px" viewBox="0 0 71 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>triangle</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M32.2351445,17.5358128 C35.2958595,12.9447404 40.256567,12.9422024 43.3189739,17.5358128 L82.2351445,75.9100687 C85.2958595,80.5011412 83.3023263,84.2229408 77.7769954,84.2229408 L-2.22287695,84.2229408 C-7.7457597,84.2229408 -9.74343301,80.5036791 -6.68102608,75.9100687 L32.2351445,17.5358128 Z" id="triangle" fill="white" transform="translate(37.777059, 46.722941) rotate(90.000000) translate(-37.777059, -46.722941) "></path>
+    </g>
+</svg>

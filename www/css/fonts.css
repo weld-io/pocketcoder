@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'weld-light';
+	src: url('fonts/weld-light.eot');
+	src: url('fonts/weld-light.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/weld-light.woff2') format('woff2'),
+		 url('fonts/weld-light.woff') format('woff'),
+		 url('fonts/weld-light.ttf') format('truetype'),
+		 url('fonts/weld-light.svg#weld-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

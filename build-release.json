@@ -1,0 +1,32 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "certificate/android_cert.jks",
+            "storePassword": "weldweld",
+            "alias": "weld",
+            "password" : "weldweld",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "certificate/android_cert.jks",
+            "storePassword": "weldweld",
+            "alias": "weld",
+            "password" : "weldweld",
+            "keystoreType": ""
+        }
+    },
+    "ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Developer",
+            "provisioningProfile": "",
+            "developmentTeam": "QSWWLY3ET2",
+            "packageType": "development"
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Developer",
+            "provisioningProfile": "",
+            "developmentTeam": "QSWWLY3ET2",
+            "packageType": "app-store"
+        }
+    }
+}
