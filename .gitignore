@@ -3,7 +3,9 @@ plugins/
 hooks/README.md
 
 certificate/
+build-release.json
 
 www/bower_components/
 res/icon/ios/*.png
 res/icon/android/*.png
+
