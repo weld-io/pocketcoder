@@ -165,7 +165,7 @@ button.fullwidth {
 }
 #insertCategories button {
 	width: initial;
-	font-size: 1em;
+	font-size: 0.8em;
 	height: 2em;
 	border-radius: 0.2em;
 	margin: 0 0.1em 0.1em 0;
