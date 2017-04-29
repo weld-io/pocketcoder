@@ -7,5 +7,6 @@ build-release.json
 
 www/bower_components/
 res/icon/ios/*.png
+res/splash/ios/*.png
 res/icon/android/*.png
-
+res/splash/android/*.png

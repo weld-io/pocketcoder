@@ -47,7 +47,7 @@ done
 # iOS
 folder=ios
 mkdir $folder
-array=("20x20" "29x29" "40x40" "57x57" "58x58" "60x60" "76x76" "80x80" "87x87" "114x114" "120x120" "152x152" "167x167" "180x180" "228x228" "1024x1024")
+array=("20x20" "29x29" "40x40" "50x50" "57x57" "58x58" "60x60" "72x72" "76x76" "80x80" "87x87" "100x100" "114x114" "120x120" "144x144" "152x152" "167x167" "180x180" "228x228" "1024x1024")
 for resolution in "${array[@]}"; do
 	echo "Creating $source for $folder in $resolution..."
 	mogrify -format $format -depth 8 -scale $resolution -extent $resolution -gravity center -format "$resolution.png" -path "./$folder" "$source"
@@ -56,34 +56,34 @@ done
 cd ..
 
 
-# # ----- Splash images -----
+# ----- Splash images -----
 
-# echo
-# echo "Making splash images..."
-# echo
+echo
+echo "Making splash images..."
+echo
 
-# cd splash
-# source="splash.png"
+cd splash
+source="splash.png"
 
-# # Android
-# folder=android
-# mkdir $folder
-# array=("200x320" "320x200" "320x480" "480x320" "480x800" "800x480" "720x1280" "1280x720" "960x1600" "1600x960" "1280x1920" "1920x1280")
-# for resolution in "${array[@]}"; do
-# 	echo "Creating $source for $folder in $resolution..."
-# 	mogrify -format $format -depth 8 -thumbnail $resolution^ -extent $resolution -gravity center -format "$resolution.png" -path "./$folder" "$source"
-# done
+# Android
+folder=android
+mkdir $folder
+array=("200x320" "320x200" "320x480" "480x320" "480x800" "800x480" "720x1280" "1280x720" "960x1600" "1600x960" "1280x1920" "1920x1280")
+for resolution in "${array[@]}"; do
+	echo "Creating $source for $folder in $resolution..."
+	mogrify -format $format -depth 8 -thumbnail $resolution^ -extent $resolution -gravity center -format "$resolution.png" -path "./$folder" "$source"
+done
 
-# # iOS
-# folder=ios
-# mkdir $folder
-# array=("320x480" "480x320" "640x1136" "640x960" "750x1334" "768x1024" "960x640" "1024x768" "1080x1920" "1136x640" "1334x750" "1536x2048" "1920x1080" "2048x1536" "1280x1920" "1920x1280" "768x1004" "1536x2008" "1024x748" "2048x1496" "1242x2208" "2208x1242")
-# for resolution in "${array[@]}"; do
-# 	echo "Creating $source for $folder in $resolution..."
-# 	mogrify -format $format -depth 8 -thumbnail $resolution^ -extent $resolution -gravity center -format "$resolution.png" -path "./$folder" "$source"
-# done
+# iOS
+folder=ios
+mkdir $folder
+array=("320x480" "480x320" "640x1136" "640x960" "750x1334" "768x1024" "960x640" "1024x768" "1080x1920" "1136x640" "1334x750" "1536x2048" "1920x1080" "2048x1536" "1280x1920" "1920x1280" "768x1004" "1536x2008" "1024x748" "2048x1496" "1242x2208" "2208x1242")
+for resolution in "${array[@]}"; do
+	echo "Creating $source for $folder in $resolution..."
+	mogrify -format $format -depth 8 -thumbnail $resolution^ -extent $resolution -gravity center -format "$resolution.png" -path "./$folder" "$source"
+done
 
-# cd ..
+cd ..
 
 
 # ----- Done -----

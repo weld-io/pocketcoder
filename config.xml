@@ -14,10 +14,70 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon density="ldpi" src="res/icon/android/icon.36x36.png" />
+        <icon density="mdpi" src="res/icon/android/icon.48x48.png" />
+        <icon density="hdpi" src="res/icon/android/icon.72x72.png" />
+        <icon density="xhdpi" src="res/icon/android/icon.96x96.png" />
+        <icon density="xxhdpi" src="res/icon/android/icon.144x144.png" />
+        <icon density="xxxhdpi" src="res/icon/android/icon.192x192.png" />
+        <icon src="res/icon/android/icon.152x152.png" />
+        <splash density="port-ldpi" src="res/splash/android/splash.200x320.png" />
+        <splash density="port-mdpi" src="res/splash/android/splash.320x480.png" />
+        <splash density="port-hdpi" src="res/splash/android/splash.480x800.png" />
+        <splash density="port-xhdpi" src="res/splash/android/splash.720x1280.png" />
+        <splash density="port-xxhdpi" src="res/splash/android/splash.960x1600.png" />
+        <splash density="port-xxxhdpi" src="res/splash/android/splash.1280x1920.png" />
+        <splash density="land-ldpi" src="res/splash/android/splash.320x200.png" />
+        <splash density="land-mdpi" src="res/splash/android/splash.480x320.png" />
+        <splash density="land-hdpi" src="res/splash/android/splash.800x480.png" />
+        <splash density="land-xhdpi" src="res/splash/android/splash.1280x720.png" />
+        <splash density="land-xxhdpi" src="res/splash/android/splash.1600x960.png" />
+        <splash density="land-xxxhdpi" src="res/splash/android/splash.1920x1280.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <icon width="20" height="20" src="res/icon/ios/icon.20x20.png" />
+        <icon width="29" height="29" src="res/icon/ios/icon.29x29.png" />
+        <icon width="40" height="40" src="res/icon/ios/icon.40x40.png" />
+        <icon width="50" height="50" src="res/icon/ios/icon.50x50.png" />
+        <icon width="57" height="57" src="res/icon/ios/icon.57x57.png" />
+        <icon width="58" height="58" src="res/icon/ios/icon.58x58.png" />
+        <icon width="60" height="60" src="res/icon/ios/icon.60x60.png" />
+        <icon width="72" height="72" src="res/icon/ios/icon.72x72.png" />
+        <icon width="76" height="76" src="res/icon/ios/icon.76x76.png" />
+        <icon width="80" height="80" src="res/icon/ios/icon.80x80.png" />
+        <icon width="87" height="87" src="res/icon/ios/icon.87x87.png" />
+        <icon width="100" height="100" src="res/icon/ios/icon.100x100.png" />
+        <icon width="114" height="114" src="res/icon/ios/icon.114x114.png" />
+        <icon width="120" height="120" src="res/icon/ios/icon.120x120.png" />
+        <icon width="144" height="144" src="res/icon/ios/icon.144x144.png" />
+        <icon width="152" height="152" src="res/icon/ios/icon.152x152.png" />
+        <icon width="167" height="167" src="res/icon/ios/icon.167x167.png" />
+        <icon width="180" height="180" src="res/icon/ios/icon.180x180.png" />
+        <icon width="228" height="228" src="res/icon/ios/icon.228x228.png" />
+        <splash width="320" height="480" src="res/splash/ios/splash.320x480.png" />
+        <splash width="480" height="320" src="res/splash/ios/splash.480x320.png" />
+        <splash width="640" height="960" src="res/splash/ios/splash.640x960.png" />
+        <splash width="640" height="1136" src="res/splash/ios/splash.640x1136.png" />
+        <splash width="750" height="1334" src="res/splash/ios/splash.750x1334.png" />
+        <splash width="768" height="1004" src="res/splash/ios/splash.768x1004.png" />
+        <splash width="768" height="1024" src="res/splash/ios/splash.768x1024.png" />
+        <splash width="960" height="640" src="res/splash/ios/splash.960x640.png" />
+        <splash width="1024" height="748" src="res/splash/ios/splash.1024x748.png" />
+        <splash width="1024" height="768" src="res/splash/ios/splash.1024x768.png" />
+        <splash width="1080" height="1920" src="res/splash/ios/splash.1080x1920.png" />
+        <splash width="1136" height="640" src="res/splash/ios/splash.1136x640.png" />
+        <splash width="1242" height="2208" src="res/splash/ios/splash.1242x2208.png" />
+        <splash width="1280" height="1920" src="res/splash/ios/splash.1280x1920.png" />
+        <splash width="1334" height="750" src="res/splash/ios/splash.1334x750.png" />
+        <splash width="1536" height="2008" src="res/splash/ios/splash.1536x2008.png" />
+        <splash width="1536" height="2048" src="res/splash/ios/splash.1536x2048.png" />
+        <splash width="1920" height="1080" src="res/splash/ios/splash.1920x1080.png" />
+        <splash width="1920" height="1280" src="res/splash/ios/splash.1920x1280.png" />
+        <splash width="2048" height="1496" src="res/splash/ios/splash.2048x1496.png" />
+        <splash width="2048" height="1536" src="res/splash/ios/splash.2048x1536.png" />
+        <splash width="2208" height="1242" src="res/splash/ios/splash.2208x1242.png" />
     </platform>
     <engine name="ios" spec="~4.3.1" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.2" />
