@@ -1,5 +1,5 @@
 //
-// Name:    ScriptRunner.js
+// Name:    ScriptRunner
 // Purpose: Crossplatform library for helper functions
 // Creator: Tom Söderlund
 //
@@ -15,6 +15,7 @@ var ScriptRunner = ScriptRunner || {};
 
 	ScriptRunner.snippets = {
 		'Flow': {
+			'var': "var website = 'www.weld.io';",
 			'if': "if (true) {\n};",
 			'for': "for (var i = 0; i < array.length; i++) {\n	array[i]\n};",
 			'for2': "for (var key in collection) {\n	\n};",
@@ -29,8 +30,9 @@ var ScriptRunner = ScriptRunner || {};
 			'upUntilString': "var upUntilString = bigString.substring(0, bigString.indexOf('_'));",
 		},
 		'Collections': {
-			'sortArray': "array.sort(function (a, b) { return a > b });",
-			'lodashMap': "_.map(users, function (user) { return user.name });",
+			'sortArray': "array.sort(function (a, b) { return a > b; });",
+			'lodashMap': "_.map(users, function (user) { return user.name; });",
+			'lodashReduce': "_.reduce(values, function (total, value) { return total + value; });",
 		},
 		'Graphics': {
 			'rect': "draw.rect('100%', '100%').fill('DeepPink');",
@@ -42,9 +44,11 @@ var ScriptRunner = ScriptRunner || {};
 			'path': "draw.path('M50,0 C22.4,0 0,22.4 0,50 C0,77.6 22.4,100 50,100 L50,0 L50,0 Z').fill('greenyellow');",
 		},
 		'DOM': {
-			'getBody': "var element = document.getElementById('previewBody');",
+			'getBodyPure': "var element = document.getElementById('previewBody');",
 			'eventPure': "element.addEventListener('click', function () { alert('Hello!'); });",
 			'appendPure': "element.appendChild(document.createElement('p'));",
+			'getBodyJQuery': "var $element = $('#previewBody');",
+			'eventJQuery': "$element.on('click', function () { alert('Hello!'); });",
 			'appendJQuery': "var $newElement = $('<p>Hello</p>').appendTo('#previewBody');",
 		},
 		'Debug': {
@@ -55,13 +59,6 @@ var ScriptRunner = ScriptRunner || {};
 
 
 	ScriptRunner.executeScript = function (scr) {
-
-		// http://stackoverflow.com/questions/9251837/how-to-remove-all-listeners-in-an-element
-		var removeAllEventListeners = function (elementId) {
-			var old_element = document.getElementById(elementId);
-			var new_element = old_element.cloneNode(true);
-			old_element.parentNode.replaceChild(new_element, old_element);
-		};
 
 		// console.log
 		function log(str) {
@@ -92,9 +89,8 @@ var ScriptRunner = ScriptRunner || {};
 		}
 
 		// Clear content and event listeners
-		document.getElementById('previewTextBody').innerHTML = '';
-		draw.clear();
-		removeAllEventListeners('previewBody');
+		ScriptRunner.initPreviewBody();
+
 		// Replace console.log
 		scr = scr.replace(/console.log/g, 'log');
 		scr = scr.replace(/console.dir/g, 'dir');
@@ -110,9 +106,29 @@ var ScriptRunner = ScriptRunner || {};
 
 	var draw;
 
-	ScriptRunner.initSVG = function () {
-		draw = SVG('previewGraphicsBody').size('100%', '100%');
+	// http://stackoverflow.com/questions/9251837/how-to-remove-all-listeners-in-an-element
+	var removeAllEventListeners = function (elementId) {
+		var old_element = document.getElementById(elementId);
+		var new_element = old_element.cloneNode(true);
+		old_element.parentNode.replaceChild(new_element, old_element);
+	};
+
+	// Reset previewBody - clear content and event listeners
+	ScriptRunner.initPreviewBody = function () {
+		removeAllEventListeners('previewBody');
+		document.getElementById('previewBody').innerHTML = '<div id="previewGraphicsBody"></div><div id="previewTextBody"></div>';
+		initSVG();
+	};
+
+	ScriptRunner.getSVG = function () {
 		return draw;
+	};
+
+	var initSVG = function () {
+		draw = SVG('previewGraphicsBody').size('100%', '100%');
+	};
+
+	ScriptRunner.init = function () {
 	};
 
 }(ScriptRunner));

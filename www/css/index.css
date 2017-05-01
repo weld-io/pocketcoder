@@ -1,3 +1,33 @@
+/*
+
+$weld_cyan: #6ec8dc;
+$weld_cyan_light: #acdde9;
+$weld_cyan_dark: #327a8c;
+$weld_green: #47e2a1;
+$weld_yellow: #fffa46;
+$weld_red: #f86060;
+$weld_red_light: #faafae;
+$weld_orange: #ff8316;
+$weld_blue: #015593;
+$weld_purple: #be59a0;
+
+$weld_darkblue: #1c2938;
+$weld_darkblue_light: #2e3b4a;
+
+$weld_white: white;
+$weld_gray_10: #fbfbfb;
+$weld_gray_20: #f7f7f8;
+$weld_gray_30: #f2f3f4;
+$weld_gray_40: #eeeff1;
+$weld_gray_50: #eaebed;
+$weld_gray_60: #bbbcbe;
+$weld_gray_70: #8c8d8e;
+$weld_gray_80: #5e5e5f;
+$weld_gray_90: #2f2f2f;
+$weld_black: black;
+
+*/
+
 * {
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
@@ -77,6 +107,10 @@ body {
 	color: #546767;
 	background-color: #bac4c4;
 }
+#insertCategories button.clearButton {
+	color: #f86060;
+	background-color: #3b5151;
+}
 
 #insertContent {
 	background-color: #546767;
@@ -105,7 +139,7 @@ body {
 }
 
 #editor textarea {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 /* ----- Nav & Buttons ----- */
